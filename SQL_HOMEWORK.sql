@@ -21,6 +21,13 @@ SELECT last_name
 FROM actor
 WHERE last_name LIKE '%GEN%';
 
+#2c. Find all actors whose last names contain the letters LI. 
+#This time, order the rows by last name and first name, in that order:
+SELECT last_name, first_name 
+FROM actor
+WHERE last_name LIKE '%LI%'
+ORDER BY last_name, first_name DESC;
+
 #3a. You want to keep a description of each actor. 
 #You don't think you will be performing queries on a description, so create a column in the table actor named description and use the data type BLOB 
 #(Make sure to research the type BLOB, as the difference between it and VARCHAR are significant).
